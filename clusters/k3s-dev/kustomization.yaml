@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
   - source-git.yaml
   - demo-nginx-kustomization.yaml
-  - tailscale-operator-kustomization.yaml
