@@ -5,10 +5,9 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: ./apps/demo-nginx/base
-  prune: true
   sourceRef:
     kind: GitRepository
-    name: azure-hybrid-boilerplate
-  targetNamespace: demo
-
+    name: flux-system          # created by bootstrap
+  path: ./apps/demo-nginx/base # points to the file above
+  prune: true
+  timeout: 2m
