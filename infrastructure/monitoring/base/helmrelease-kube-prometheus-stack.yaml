@@ -34,7 +34,7 @@ spec:
     # Optional: make Grafana easier to reach in k3s
     grafana:
       service:
-        type: NodePort
+        type: ClusterIP
       adminUser: admin
       adminPassword: admin
 
