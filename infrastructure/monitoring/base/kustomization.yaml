@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - helm-repository.yaml
   - helmrelease-kube-prometheus-stack.yaml
+  - ingress.yaml
