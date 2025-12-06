@@ -1,0 +1,47 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+  namespace: flux-system
+spec:
+  interval: 5m
+  releaseName: kube-prometheus-stack
+
+  chart:
+    spec:
+      chart: kube-prometheus-stack
+      # pin a recent version; can bump later
+      version: 79.11.0
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-community
+        namespace: flux-system
+
+  # Where the chart will actually be installed
+  targetNamespace: monitoring
+
+  install:
+    createNamespace: true
+
+  upgrade:
+    remediation:
+      retries: 3
+
+  values:
+    # Keeps names a bit shorter
+    fullnameOverride: kube-prometheus-stack
+
+    # Optional: make Grafana easier to reach in k3s
+    grafana:
+      service:
+        type: NodePort
+      adminUser: admin
+      adminPassword: admin
+
+    prometheus:
+      service:
+        type: ClusterIP
+
+    alertmanager:
+      service:
+        type: ClusterIP
