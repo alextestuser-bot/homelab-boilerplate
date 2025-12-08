@@ -14,10 +14,6 @@ spec:
       labels:
         app: pihole
     spec:
-      # Pin to kube-node1 via label
-      nodeSelector:
-        pihole-node: "true"
-
       # Bind container directly to node network (incl. tailscale0)
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
