@@ -45,6 +45,10 @@ spec:
           env:
             - name: TZ
               value: "Europe/Sofia"
+            - name: FTLCONF_LOCAL_IPV4
+              value: "0.0.0.0"
+            - name: FTLCONF_LOCAL_IPV6
+              value: "::"
             - name: DNSMASQ_LISTENING
               value: "all"
             # Pi-hole v6 webserver port
