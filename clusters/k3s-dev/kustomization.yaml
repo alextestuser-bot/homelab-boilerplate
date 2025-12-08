@@ -4,3 +4,5 @@ resources:
   - flux-system                 
   - demo-nginx-kustomization.yaml
   - monitoring-kustomization.yaml
+  - pihole-kustomization.yaml
+
