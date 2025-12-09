@@ -4,3 +4,4 @@ resources:
   - helmrelease-portainer.yaml
   - helm-repository.yaml
   - ingress.yaml
+  - namespace.yaml
