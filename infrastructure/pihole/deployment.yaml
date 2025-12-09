@@ -47,6 +47,8 @@ spec:
               value: "Europe/Sofia"
             - name: FTLCONF_LOCAL_IPV4
               value: "0.0.0.0"
+            - name: FTLCONF_REPLY_ADDR4
+              value: "100.114.242.58"
             - name: FTLCONF_LOCAL_IPV6
               value: "::"
             - name: DNSMASQ_LISTENING
