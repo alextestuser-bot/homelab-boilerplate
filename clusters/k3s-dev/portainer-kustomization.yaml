@@ -9,7 +9,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: azure-hybrid-boilerplate
+    name: flux-system
     namespace: flux-system
   targetNamespace: portainer
   createNamespace: true
